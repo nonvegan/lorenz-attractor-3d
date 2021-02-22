@@ -1,4 +1,4 @@
-# Title
+# Lorenz Attractor
 
-[Wikipedia](link)\
-[![name gif](/name.gif)](https://nonvegan.github.io/name)
+[Wikipedia](https://en.wikipedia.org/wiki/Lorenz_system)\
+[![name gif](/name.gif)](https://nonvegan.github.io/lorenz-attractor)
