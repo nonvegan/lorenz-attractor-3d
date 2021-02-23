@@ -17,12 +17,18 @@ window.addEventListener(
       controls.autoRotate = switchInput.checked;
     });
     resetButton.addEventListener("click", (evt) => {
-      // controls.reset();
-      console.log(line.geometry);
+      controls.reset();
+    });
+    window.addEventListener("resize", () => {
+      width = Math.min(window.innerWidth, window.innerHeight) / 1.6;
+      height = Math.min(window.innerWidth, window.innerHeight) / 1.6;
+      camera.aspect = width / height;
+      camera.updateProjectionMatrix();
+      renderer.setSize(width, height);
     });
 
-    const width = Math.min(window.innerWidth, window.innerHeight) / 1.5;
-    const height = Math.min(window.innerWidth, window.innerHeight) / 1.5;
+    let width = Math.min(window.innerWidth, window.innerHeight) / 1.6;
+    let height = Math.min(window.innerWidth, window.innerHeight) / 1.6;
     let renderer, scene, camera, matLine, controls, line;
     const positions = [];
     const colors = [];
