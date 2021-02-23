@@ -4,9 +4,6 @@ import { LineMaterial } from "https://threejs.org/examples/jsm/lines/LineMateria
 import { OrbitControls } from "https://threejs.org/examples/jsm/controls/OrbitControls.js";
 import { Line2 } from "https://threejs.org/examples/jsm/lines/Line2.js";
 
-import { mapValue, restrain, getMs, getMousePosElem } from "./helpers.js";
-import { Vector } from "./classes.js";
-
 window.addEventListener(
   "load",
   function main(evt) {
@@ -20,7 +17,7 @@ window.addEventListener(
       controls.autoRotate = switchInput.checked;
     });
     resetButton.addEventListener("click", (evt) => {
-      console.log( camera.position)
+      console.log(camera.position);
       controls.reset();
     });
 
@@ -33,8 +30,8 @@ window.addEventListener(
     let x = 1;
     let y = 1;
     let z = 1;
-    let n = 0;
     const dt = 0.01;
+    let n = 0;
     const a = 10;
     const b = 28;
     const c = 8 / 3;
@@ -47,7 +44,7 @@ window.addEventListener(
       canvasDiv.appendChild(renderer.domElement);
       scene = new THREE.Scene();
       camera = new THREE.PerspectiveCamera(45, width / height, 1, 10000);
-      camera.position.set(-140,60,0);
+      camera.position.set(-140, 60, 0);
 
       const point = new THREE.Vector3();
       const color = new THREE.Color();
@@ -67,7 +64,6 @@ window.addEventListener(
       const geometry = new LineGeometry();
       geometry.setPositions(positions);
       geometry.setColors(colors);
-
       matLine = new LineMaterial({
         linewidth: 3,
         vertexColors: true,
@@ -76,7 +72,7 @@ window.addEventListener(
       controls.target = new THREE.Vector3(x, y, z);
       controls.minDistance = 10;
       controls.maxDistance = 500;
-      controls.saveState()
+      controls.saveState();
       scene.add(new Line2(geometry, matLine));
       renderer.render(scene, camera);
     }
@@ -95,24 +91,3 @@ window.addEventListener(
   },
   false
 );
-
-/* 
-function getValues() {
-  let x = 1;
-  let y = 1;
-  let z = 1;
-  let n = 0;
-  const dt = 0.01;
-  const a = 10;
-  const b = 28;
-  const c = 8 / 3;
-  for (let i = 0; i < 2000; i++) {
-    const dx = a * (y - x);
-    const dy = x * (b - z) - y;
-    const dz = x * y - c * z;
-    x += dx * dt;
-    y += dy * dt;
-    z += dz * dt;
-
-  }
-*/
