@@ -21,8 +21,8 @@ window.addEventListener(
       console.log(line.geometry);
     });
 
-    const width = Math.min(window.innerWidth, window.innerHeight) / 1.8;
-    const height = Math.min(window.innerWidth, window.innerHeight) / 1.8;
+    const width = Math.min(window.innerWidth, window.innerHeight) / 1.5;
+    const height = Math.min(window.innerWidth, window.innerHeight) / 1.5;
     let renderer, scene, camera, matLine, controls, line;
     const positions = [];
     const colors = [];
