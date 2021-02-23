@@ -63,7 +63,7 @@ window.addEventListener(
       geometry.setPositions(positions);
       geometry.setColors(colors);
       matLine = new LineMaterial({
-        linewidth: 3,
+        linewidth: 4,
         vertexColors: true,
       });
       controls = new OrbitControls(camera, renderer.domElement);
