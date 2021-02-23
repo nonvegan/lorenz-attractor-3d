@@ -17,7 +17,6 @@ window.addEventListener(
       controls.autoRotate = switchInput.checked;
     });
     resetButton.addEventListener("click", (evt) => {
-      console.log(camera.position);
       controls.reset();
     });
 
@@ -31,7 +30,6 @@ window.addEventListener(
     let y = 1;
     let z = 1;
     const dt = 0.01;
-    let n = 0;
     const a = 10;
     const b = 28;
     const c = 8 / 3;
