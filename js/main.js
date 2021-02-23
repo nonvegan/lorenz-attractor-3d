@@ -63,7 +63,6 @@ window.addEventListener(
         color.setHSL((n += 0.01), 1.0, 0.5);
         colors.push(color.r, color.g, color.b);
       }
-
       const geometry = new LineGeometry();
       geometry.setPositions(positions);
       geometry.setColors(colors);
@@ -71,14 +70,12 @@ window.addEventListener(
         linewidth: 4,
         vertexColors: true,
       });
-
       controls = new OrbitControls(camera, renderer.domElement);
       controls.target = new THREE.Vector3(x, y, z);
       controls.minDistance = 10;
       controls.maxDistance = 500;
       controls.saveState();
       scene.add((line = new Line2(geometry, matLine)));
-      renderer.render(scene, camera);
     }
 
     function animate() {
