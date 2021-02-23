@@ -17,12 +17,13 @@ window.addEventListener(
       controls.autoRotate = switchInput.checked;
     });
     resetButton.addEventListener("click", (evt) => {
-      controls.reset();
+      // controls.reset();
+      console.log(line.geometry);
     });
 
-    const width = window.screen.height / 1.8;
-    const height = window.screen.height / 1.8;
-    let renderer, scene, camera, matLine, controls;
+    const width = Math.min(window.innerWidth, window.innerHeight) / 1.8;
+    const height = Math.min(window.innerWidth, window.innerHeight) / 1.8;
+    let renderer, scene, camera, matLine, controls, line;
     const positions = [];
     const colors = [];
     const MAX_POINTS = 1000;
@@ -43,8 +44,6 @@ window.addEventListener(
       scene = new THREE.Scene();
       camera = new THREE.PerspectiveCamera(45, width / height, 1, 10000);
       camera.position.set(-140, 60, 0);
-
-      const point = new THREE.Vector3();
       const color = new THREE.Color();
       for (let i = 0, n = 0; i < MAX_POINTS; i++) {
         const dx = a * (y - x);
@@ -55,7 +54,7 @@ window.addEventListener(
         z += dz * dt;
         if (n > 1) n = 0;
         positions.push(x, y, z);
-        color.setHSL((n += 0.005), 1.0, 0.5);
+        color.setHSL((n += 0.01), 1.0, 0.5);
         colors.push(color.r, color.g, color.b);
       }
 
@@ -66,12 +65,13 @@ window.addEventListener(
         linewidth: 4,
         vertexColors: true,
       });
+
       controls = new OrbitControls(camera, renderer.domElement);
       controls.target = new THREE.Vector3(x, y, z);
       controls.minDistance = 10;
       controls.maxDistance = 500;
       controls.saveState();
-      scene.add(new Line2(geometry, matLine));
+      scene.add((line = new Line2(geometry, matLine)));
       renderer.render(scene, camera);
     }
 
