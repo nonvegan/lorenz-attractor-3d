@@ -32,7 +32,7 @@ window.addEventListener(
     let renderer, scene, camera, matLine, controls, line;
     const positions = [];
     const colors = [];
-    const MAX_POINTS = 2000;
+    const MAX_POINTS = 3000;
     let x = 1;
     let y = 1;
     let z = 1;
@@ -67,7 +67,7 @@ window.addEventListener(
       geometry.setPositions(positions);
       geometry.setColors(colors);
       matLine = new LineMaterial({
-        linewidth: 4,
+        linewidth: 3,
         vertexColors: true,
       });
       controls = new OrbitControls(camera, renderer.domElement);
