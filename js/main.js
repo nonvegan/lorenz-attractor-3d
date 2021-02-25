@@ -32,7 +32,7 @@ window.addEventListener(
     let renderer, scene, camera, matLine, controls, line;
     const positions = [];
     const colors = [];
-    const MAX_POINTS = 1000;
+    const MAX_POINTS = 2000;
     let x = 1;
     let y = 1;
     let z = 1;
