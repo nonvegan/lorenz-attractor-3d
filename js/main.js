@@ -74,6 +74,7 @@ window.addEventListener(
       controls.target = new THREE.Vector3(x, y, z);
       controls.minDistance = 10;
       controls.maxDistance = 500;
+      controls.autoRotate = true;
       controls.saveState();
       scene.add((line = new Line2(geometry, matLine)));
     }
