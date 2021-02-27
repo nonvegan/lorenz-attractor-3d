@@ -44,7 +44,7 @@ function main(evt) {
   let color = new THREE.Color();
   let n = 0;
 
-  const MAX_AUTO_GEN_POINTS = 2000;
+  const MAX_AUTO_GEN_POINTS = 5000;
   const dt = 0.005;
   const a = 10;
   const b = 28;
