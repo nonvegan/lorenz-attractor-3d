@@ -45,8 +45,11 @@
     label {
         font-size: 2rem;
         margin-top: 1.5vh;
-        margin-left: 0.5rem;
+        margin-left: 1.5rem;
     }
+    label.switch {
+        margin-left: 0.5vw;
+     }
 
     input,
     button,
@@ -55,13 +58,15 @@
         height: 3rem;
         background-color: inherit;
         color: inherit;
-        margin-right: 0.5vw;
+        margin-right: 0vw;
         margin-left: 1.5vw;
         margin-top: 1.5vh;
         border: 0.3rem solid white;
         border-radius: .75rem;
         font-size: 1.25rem;
     }
+
+   
 
     option,
     option div {
