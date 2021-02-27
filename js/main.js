@@ -30,6 +30,7 @@ function main(evt) {
     renderer.setSize(width, height);
   });
 
+  
   let width = Math.min(window.innerWidth, window.innerHeight) / 1.6;
   let height = Math.min(window.innerWidth, window.innerHeight) / 1.6;
   let renderer;
@@ -109,7 +110,7 @@ function main(evt) {
     geometry.setPositions(positions);
     geometry.setColors(colors);
     matLine = new LineMaterial({
-      linewidth: width/150,
+      linewidth: width / 150,
       vertexColors: true,
     });
     let line = new Line2(geometry, matLine);
