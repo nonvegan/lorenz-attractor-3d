@@ -68,7 +68,7 @@ function main(evt) {
     controls.minDistance = 10;
     controls.maxDistance = 500;
     controls.autoRotate = switchInput.checked;
-    controls.autoRotateSpeed = 5;
+    controls.autoRotateSpeed = 4;
     controls.saveState();
   }
 
