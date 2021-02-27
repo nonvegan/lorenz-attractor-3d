@@ -67,6 +67,7 @@ function main(evt) {
     controls = new OrbitControls(camera, renderer.domElement);
     controls.minDistance = 10;
     controls.maxDistance = 500;
+    controls.autoRotate = switchInput.checked;
     controls.autoRotateSpeed = 5;
     controls.saveState();
   }
