@@ -30,14 +30,9 @@ function main(evt) {
     renderer.setSize(width, height);
   });
 
-  
   let width = Math.min(window.innerWidth, window.innerHeight) / 1.6;
   let height = Math.min(window.innerWidth, window.innerHeight) / 1.6;
-  let renderer;
-  let scene;
-  let camera;
-  let matLine;
-  let controls;
+  let renderer, scene, camera, matLine, controls;
   let positions = [];
   let i = 0;
   let colors = [];
@@ -58,7 +53,7 @@ function main(evt) {
       antialias: true,
     });
     renderer.setPixelRatio(width / height);
-    renderer.setClearColor(0x000000, 0.0);
+    renderer.setClearColor(0x282c34, 1);
     renderer.setSize(width, height);
     canvasDiv.appendChild(renderer.domElement);
     scene = new THREE.Scene();
@@ -79,7 +74,6 @@ function main(evt) {
     }
     controls.target.lerp(new THREE.Vector3(x, y, z), 0.01);
     controls.update();
-    renderer.setClearColor(0x000000, 0);
     renderer.setViewport(0, 0, width, height);
     matLine.resolution.set(width, height);
     renderer.render(scene, camera);

@@ -1,14 +1,3 @@
-    :root {
-        --fuchsia: #f92672;
-        --light-violet: #ae81ff;
-        --bunker: #21252b;
-        --ebony: #282c34;
-        --atomic-tangerine: #FC9867;
-        --dandelion: #FFD866;
-        --feijoa: #A9DC76;
-        --turquoise-blue: #78dce8;
-    }
-
     html,
     body {
         margin: 0;
@@ -30,6 +19,7 @@
 
     canvas {
         background-color: #282c34;
+        cursor: pointer;
         border: 0.3rem solid #ae81ff;
         border-radius: 0.5rem;
     }
@@ -47,9 +37,10 @@
         margin-top: 1.5vh;
         margin-left: 1.5rem;
     }
+
     label.switch {
         margin-left: 0.5vw;
-     }
+    }
 
     input,
     button,
@@ -65,8 +56,6 @@
         border-radius: .75rem;
         font-size: 1.25rem;
     }
-
-   
 
     option,
     option div {
