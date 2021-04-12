@@ -79,7 +79,7 @@ function main(evt) {
     }
     controls.target.lerp(new THREE.Vector3(x, y, z), 0.01);
     controls.update();
-    renderer.setClearColor(0x000000, 0);
+    renderer.setClearColor(0x282c34, 0);
     renderer.setViewport(0, 0, width, height);
     matLine.resolution.set(width, height);
     renderer.render(scene, camera);
