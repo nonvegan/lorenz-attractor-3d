@@ -1,8 +1,8 @@
-import * as THREE from "https://threejs.org/build/three.module.js";
-import { LineGeometry } from "https://threejs.org/examples/jsm/lines/LineGeometry.js";
-import { LineMaterial } from "https://threejs.org/examples/jsm/lines/LineMaterial.js";
-import { OrbitControls } from "https://threejs.org/examples/jsm/controls/OrbitControls.js";
-import { Line2 } from "https://threejs.org/examples/jsm/lines/Line2.js";
+import * as THREE from "https://cdn.skypack.dev/three@0.136.0/build/three.module.js";
+import { LineGeometry } from "https://cdn.skypack.dev/three@0.136.0/examples/jsm/lines/LineGeometry.js";
+import { LineMaterial } from "https://cdn.skypack.dev/three@0.136.0/examples/jsm/lines/LineMaterial.js";
+import { OrbitControls } from 'https://cdn.skypack.dev/three@0.136.0/examples/jsm/controls/OrbitControls.js';
+import { Line2 } from "https://cdn.skypack.dev/three@0.136.0/examples/jsm/lines/Line2.js";
 
 window.addEventListener("load", main, false);
 
